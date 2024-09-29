@@ -6,6 +6,9 @@
     <title>CSS assignment</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <script src='main.js'></script>
 </head>
 
@@ -49,7 +52,14 @@
         animation: color-change 1s infinite;
     }
 
+    
 </style>
+
+
+
+
+
+
 <body id="main">
     <div id="content">
         <h1 style="color: rgb(255, 173, 197);">
@@ -62,10 +72,15 @@
 
         <p>
             <font size="1">
-                She is my <span class = "rainbow-text"><font size = "10"><b>wife</b></font></span>
+                <div>
+                    <p style="display: inline;">She is my </p>
+                    <font size = "10"><p id="word" class="rainbow-text" style="display: inline; margin-left: 5px; font-family: 'Dancing Script';"></p></font>
+                </div>
             </font>
         </p>
     </div>
+
+    <script src ="TypingEffect.js"></script>
 </body>
 </html>
 
