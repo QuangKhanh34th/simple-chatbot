@@ -2,13 +2,14 @@ const words = ["wife", "everything", "world", "reason to live"];
 let i = 0;
 let timer;
 
-
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 function deletingEffect() {
 	let word = words[i].split("");
 	var loopDeleting = function() {
 		if (word.length > 0) {
 			word.pop();
-			//document.getElementById('word').innerHTML = "She is my " + word.join("");
             document.getElementById('word').innerHTML = word.join("");
 		} else {
 			if (words.length > (i + 1)) {
@@ -26,16 +27,17 @@ function deletingEffect() {
 
 function typingEffect() {
 	let word = words[i].split("");
-    //document.getElementById('word').innerHTML = "She is my ";
+    
 	var loopTyping = function() {
 		if (word.length > 0) {
 			document.getElementById('word').innerHTML += word.shift();
 		} else {
-			deletingEffect();
+            sleep(1500).then(() => { deletingEffect(); });
 			return false;
 		};
-		timer = setTimeout(loopTyping, 350);
+		timer = setTimeout(loopTyping, 50);
 	};
+    
 	loopTyping();
 };
 
