@@ -1,2 +1,2 @@
-# QuangKhanh34th.github.io
-QuangKhanh34th.github.io
+# Weeb Corner
+quangkhanh34th.github.io

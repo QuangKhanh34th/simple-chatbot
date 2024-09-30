@@ -7,19 +7,19 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <script src='main.js'></script>
 </head>
 
 
 
 <style>
-    #main {
+    #logo {
         position: relative;
     }
 
-    #main::after {
+    #logo::after {
         content : "";
         display: block;
         position: absolute;
@@ -31,8 +31,12 @@
         background-position: center;
         width: 100%;
         height: 100%;
-        opacity: 0.2;
+        opacity: 0.5;
         z-index: -1;
+    }
+
+    #main {
+        background-color: rgb(129, 204, 219);
     }
 
     #content {
@@ -61,23 +65,25 @@
 
 
 <body id="main">
-    <div id="content">
-        <h1 style="color: rgb(255, 173, 197);">
-            <font size="10">
-                <i>Look at this beautiful figure</i>
-            </font>
-        </h1>
+    <div id = "logo">
+        <div id="content">
+            <h1 style="color: rgb(255, 173, 197);">
+                <font size="10">
+                    <i>Look at this beautiful figure</i>
+                </font>
+            </h1>
 
-        <img src="Artworks/よーな - 無題 (113616968) .png" alt="Nadeshiko in autumn leaves" style="height: 50%;width: 50%; ">
+            <img src="Artworks/よーな - 無題 (113616968) .png" alt="Nadeshiko in autumn leaves" style="height: 50%;width: 50%; ">
 
-        <p>
-            <font size="1">
-                <div>
-                    <p style="display: inline;">She is my </p>
-                    <font size = "10"><p id="word" class="rainbow-text" style="display: inline; margin-left: 5px; font-family: 'Dancing Script';"></p></font>
-                </div>
-            </font>
-        </p>
+            <p>
+                <font size="1">
+                    <div>
+                        <p style="display: inline;">She is my </p>
+                        <font size = "10"><p id="word" class="rainbow-text" style="display: inline; margin-left: 5px; font-family: 'Dancing Script';"></p></font>
+                    </div>
+                </font>
+            </p>
+        </div>
     </div>
 
     <script src ="TypingEffect.js"></script>
