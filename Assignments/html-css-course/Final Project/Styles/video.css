@@ -1,0 +1,90 @@
+/*
+    image behavior: when we set the width of
+    an image, its height will also be changed to
+    keep the dimension of the image
+
+    if you want to set both width and height but also want
+    to keep the image from looking disorted, use "object-fit" attribute,
+    the behavior depend on how you want it to look like (fill is used by default)
+
+    image specific attribute
+      object-fit:contain;
+      object-position: left;
+
+    */
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 15px;
+      row-gap: 40px;
+    }
+    
+    /* obsolete with grid introduction
+    .video-preview {
+      display: inline-block;
+      width: 300px;
+      vertical-align: top;
+      margin: 15px;
+    }
+    */
+
+
+    .thumbnail {
+      /*width: 300px; this will hard-code the width to not follow the grid layout*/
+      width: 100%; /*use 100% width of the container*/
+    }
+
+    .thumbnail-row {
+      margin-bottom: 12px;
+    }
+    
+    .video-infos-grid {
+      display: grid;
+      grid-template-columns: 50px 1fr;
+    }
+
+    /* obsolete with grid introduction
+    .channel {
+      display: inline-block;
+      width: 50px;
+      vertical-align: top;
+    }
+    */
+
+    .profile-pic {
+      width: 40px;
+      border-radius: 30px;
+    }
+
+    .special-profile-pic {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      object-position: 40% 0%;
+      border-radius: 30px;
+    }
+
+    /* obsolete with grid introduction
+    .video-infos {
+      display: inline-block;
+      width: 200px;
+    }
+    */
+
+    .video-title {
+      margin-top: 0px;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 20px; /*space between lines*/
+      margin-bottom: 12px;
+    }
+
+    .video-author, .video-stats {
+      font-size: 12px;
+      color: rgb(96, 96, 96);
+    }
+
+    .video-author {
+      margin-bottom: 4px;
+    }

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../../index.css">
+  <title>HTML-CSS-course</title>
+
+  <style>
+    ol {
+      margin-bottom: 30px;
+    }
+
+    @keyframes background-color-change {
+    0% { background-color: red; }
+    15% { background-color: orange; }
+    30% { background-color: yellow; }
+    45% { background-color: green;}
+    60% { background-color: blue; }
+    75% { background-color: indigo;}
+    90% { background-color: violet; }
+    }
+
+    @keyframes color-change-reverb {
+    0% { color: violet; }
+    15% { color: indigo; }
+    30% { color: blue; }
+    45% { color: green;}
+    60% { color: yellow; }
+    75% { color: orange;}
+    90% { color: red; }
+}
+
+    .special {
+      margin-left: 26px;
+      border-style: solid;
+      border-color: red;
+      border-width: 2px;
+
+      padding: 10px 20px;
+
+      font-family: "Roboto";
+      color: white;
+      text-decoration: none;
+
+      animation: background-color-change 2s infinite, color-change-reverb 0.5s infinite;
+      transition: opacity 0.15s;
+    }
+
+    .special:active {
+      opacity: 30%;
+    }
+  </style>
+</head>
+<body>
+
+  <ol>
+    <li><a href="../html-css-course/Introductory/website.html">HTML Basics</a></li>
+    <li><a href="../html-css-course/Introductory/buttons.html">CSS Basics</a></li>
+    <li><a href="..//html-css-course/Introductory/text.html">Text Styles</a></li>
+    <li><a href="../html-css-course/Introductory/HTML-Structure.html">The HTML Structure</a></li>   
+  </ol>
+
+  <a href="Final Project/youtube.html" class="special">
+    The Final Project
+  </a>
+
+
+  
+
+
+
+
+
+
+
+
+  <!--Return-->
+  <div class = "return" style="position: absolute;">
+    <a href="..\list.html">
+        <img src="..\..\..\Artworks\U.-だらリンちゃんとなでしこちゃん.png" style="display: block; width: 50%; height: 50%; margin-left: auto; margin-right: auto;">
+    </a>
+
+    <p id="textSlab">return to assignment list</p>
+</div>
+</body>
+</html>

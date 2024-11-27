@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Button assignments</title>
+</head>
+
+
+<style>
+  /*general style for seperating assignment element*/
+  div {
+    margin-bottom: 100px;
+  }  
+
+
+  /*4h*/
+  .back-button {
+    margin-right: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .search-result {
+    margin-left: 4px;
+    margin-right: 4px;
+    font-size: 18px;
+  }
+
+  .next-button {
+    margin-left: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+  }
+
+  /*4i*/
+  .Stretch {
+    background-color: green;
+    color: white;
+    font-size: 18px;
+
+    border: none;
+
+    padding: 8px 16px;
+
+    transition: padding 0.75s;
+
+    
+  }
+
+  .Stretch:hover {
+    cursor: pointer;
+
+    padding: 20px 40px;
+
+  }
+  /*
+    4j use additional style so when the button is clicked
+    the element below won't move
+  */
+  div.fourj {
+    position: relative;
+    height: 100px;
+  }
+  
+  .shadow {
+    position: absolute;
+    background-color: green;
+    color: white;
+    font-size: 18px;
+
+    border: none;
+
+    padding: 8px 16px;
+
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+
+  }
+
+  .shadow:hover {
+    cursor: pointer;
+  }
+
+  .shadow:active {
+    margin-top: 3px;
+    margin-left: 3px;
+
+    box-shadow: none;
+  }
+  /*4k*/
+  .OTT {
+    /**/
+    margin-right: 10px;
+    margin-left: 10px;
+
+    background-color: green;
+    color: white;
+    font-size: 18px;
+
+    border: none;
+
+    padding: 8px 15px;
+    
+    transition: padding 0.15s, margin 0.15s;
+  }
+
+  .OTT:hover {
+    cursor: pointer;
+
+    /*
+      deduct the margin and add its values to padding
+      to create "open without moving other elements"
+      feels
+    */
+    margin-left: 0px;
+    margin-right: 0px;
+
+    
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+</style>
+
+
+<body>
+  <div class="4h">
+    <button class="back-button">Back</button>
+    <a class="search-result" href="https://google.com">1</a>
+    <a class="search-result" href="https://google.com">2</a>
+    <a class="search-result" href="https://google.com">3</a>
+    <a class="search-result" href="https://google.com">4</a>
+    <a class="search-result" href="https://google.com">5</a>
+    <button class="next-button">Next</button>
+  </div>
+
+  <div class = "4i">
+    <button class="Stretch">Stretch</button> 
+  </div> 
+
+  <div class="fourj">
+    <button class="shadow">shadow</button>
+  </div>
+
+  <div class="4k">
+    <button class="OTT">one</button>
+    <button class="OTT">two</button>
+    <button class="OTT">three</button>
+  </div>
+
+  <a href="../list.html" style="display: block; position: absolute; bottom: 2%; font-style: italic;">
+    return to course's assignments list
+  </a>
+  
+  <a href="../Introductory/buttons.html" style="display: block; position: absolute; bottom: 2%; right: 2%; font-style: italic;">
+    to this Chapter's content
+  </a>
+</body>
+</html>

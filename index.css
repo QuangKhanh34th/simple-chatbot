@@ -1,0 +1,73 @@
+#logo {
+    position: relative;
+}
+
+#logo::after {
+    content : "";
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    background-image: url(Artworks/yuru-camp-insom-nial-transparent.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+#main {
+    position: relative;
+    background-color: rgb(146, 199, 207);
+}
+
+#content {
+    text-align: center;
+}
+
+
+@keyframes color-change {
+    0% { color: red; }
+    15% { color: orange; }
+    30% { color: yellow; }
+    45% { color: green;}
+    60% { color: blue; }
+    75% { color: indigo;}
+    90% { color: violet; }
+}
+.rainbow-text {
+    animation: color-change 1s infinite;
+}
+
+#textSlab {
+    -webkit-text-stroke-width: 0px;
+    -webkit-text-stroke-color: black;
+    paint-order: stroke fill;
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+}
+
+.return {
+    display: block;
+    width: 10%;
+    height: 10%;
+    bottom: 0;
+    left: 0;
+    
+}
+
+div.return a {
+    display: block;
+    margin: auto;
+    
+    
+}
+
+div.return p#textSlab {
+    margin: auto;
+    width: 80%;
+    text-align: center;
+}

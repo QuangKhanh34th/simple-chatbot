@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position Practice</title>
+</head>
+<body style="height: 3000px; padding-top: 60px; width: 3000px; padding-left: 80px;">
+  <!--
+    static is the default position
+    fixed make the element stay at a fixed position even when we scroll the web,
+    it also make the element stay on top of other elements and the below elements can take its space
+
+    The position property has 4 special properties we can use to move the element around: top, bottom, left, right
+    + top: specify how far away from the top that the element is placed, 0px is at the absolute top
+    + left: specify how far away from the left that the element is placed
+
+    If we use 2 opposite direction properties, the element will be stretched
+    
+    fixed position can cover the content, so we need to add spacing between the header and the content box
+    one way to do this is by modify the spacing of the <body> tag
+
+  -->
+  <div style="
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+    height: 50px;
+
+    ">header</div>
+
+    <!--
+      the header have a height of 50px so we will make the side bar 50px away from the top
+      setting a fixed width so the side bar won't shrink we resizing the window
+    -->
+    <div style="
+    background-color: green;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 50px;
+    width: 72px;
+    ">side bar</div>
+  <div style="
+    background-color: lightblue;
+    height: 200px;
+    width: 200px;
+    position: static;
+    ">
+    div 1
+  </div>
+  <div style="
+    background-color: lightcoral;
+    height: 200px;
+    width: 200px;
+    ">
+    div 2
+  </div>
+</body>
+</html>

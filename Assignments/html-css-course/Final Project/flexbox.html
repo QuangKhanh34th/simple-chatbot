@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flexbox Practice</title>
+</head>
+
+<!--
+  Just like grid, flex box require a container
+  elements inside a flex box will only take as much space as they need,
+  where in grid you have to specify the width first
+  "flex-direction: row" help align elements horizontally in a horizontal
+  layout
+  just like grid, if you add vertical space in one of the element, 
+  the whole box will add the same space to maintain vertical alignment
+-->
+<body style="padding-bottom: 500px;">
+  <p style="margin-bottom: 5px;">basic flexbox</p>
+  <div style="
+    display: flex;
+    flex-direction: row;  
+    ">
+    <div style="background-color: lightblue;">div 1 text</div>
+    <div style="background-color: lightpink;"> div 2 <p>text</p></div>
+  </div>
+
+  <!--the gird's "1fr" equivalent in flexbox is "flex: 1;"-->
+  <p style="margin-bottom: 5px; margin-top: 50px;">
+    flexbox with one free space column
+  </p>
+  <div style="
+    display: flex;
+    flex-direction: row;  
+    ">
+    <div style="background-color: lightblue;
+                width: 100px;
+    ">
+      100px
+    </div>
+
+    <div style="background-color: lightpink;
+                flex: 1;
+    "> 
+      flex: 1
+    </div>
+  </div>
+
+  <!--
+    The first difference between grid and flexbox is in
+    flexbox, you define the space an element takes in its own
+    style, while in grid you need to define element space
+    in the container
+    So in grid if you place the element at the wrong column, it will
+    have the wrong size and the layout will not change
+
+    Grid: rigid layout
+    Flexbox: Flexible layout
+  -->
+  <p style="margin-bottom: 5px; margin-top: 50px;">
+    flexbox with many free space columns
+  </p>
+  <div style="
+    display: flex;
+    flex-direction: row;  
+    ">
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    ">
+      100px
+    </div>
+
+    <div style="
+      background-color: lightpink;
+      flex: 1;
+    "> 
+      flex: 1
+    </div>
+
+    <div style="
+      background-color: lightblue;
+     flex: 2;
+    ">
+      flex: 2
+    </div>
+  </div>
+
+  <!--
+    By default, elements inside flexbox is align to the left
+    and we can change that using "justify-content"
+    values:
+    + start: left-side
+    + end: right-side
+  -->
+  <p style="margin-bottom: 5px; margin-top: 50px;">
+    flexbox content align
+  </p>
+  <div style="
+    height: 70px;
+    border: solid;
+    border-width: 1px;
+    border-color: gray;
+    display: flex;
+    flex-direction: row;  
+    justify-content: center;
+    ">
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    ">
+      100px
+    </div>
+
+    <div style="
+      background-color: lightpink;
+      width: 100px;
+    "> 
+      100px
+    </div>
+
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    ">
+      100px
+    </div>
+  </div>
+
+  <!--space-between spread the elements evenly across the flexbox-->
+  <p style="margin-bottom: 5px; margin-top: 50px;">
+    flexbox content align
+  </p>
+  <div style="
+    height: 70px;
+    border: solid;
+    border-width: 1px;
+    border-color: gray;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    ">
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    ">
+      100px
+    </div>
+
+    <div style="
+      background-color: lightpink;
+      width: 100px;
+    "> 
+      100px
+    </div>
+
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    ">
+      100px
+    </div>
+  </div>
+
+  <!--
+    "align items" is used to align elements vertically, by default
+    elements in flexbox are stretched to fit all the vertical
+    space of the box
+    + start: place items on top of its cell
+    + end: place items at the bottom of its cell
+  -->
+  <p style="margin-bottom: 5px; margin-top: 50px;">
+    flexbox vertical aligned content
+  </p>
+  <div style="
+    height: 70px;
+    border: solid;
+    border-width: 1px;
+    border-color: gray;
+    display: flex;
+    flex-direction: row;  
+    justify-content: space-between;
+    align-items: center;
+    ">
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    ">
+      100px
+    </div>
+
+    <div style="
+      background-color: lightpink;
+      width: 100px;
+    "> 
+      100px
+    </div>
+
+    <div style="
+      background-color: lightblue;
+      width: 100px;
+    ">
+      100px
+    </div>
+  </div>
+</body>
+</html>

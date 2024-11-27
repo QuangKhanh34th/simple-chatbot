@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .econtainer {
+      border-style: solid;
+      border-width: 1px;
+      border-color: gray;
+      border-radius: 10px;
+
+      width: 300px;
+      padding: 0px 15px;
+
+      margin-bottom: 100px;
+      
+    }
+
+    .eflexbox {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 6px;
+      padding-bottom: 6px;
+    }
+
+    .eflexbox div {
+      font-family: Roboto;
+      font-weight: 500;
+    }
+
+    .notifications {
+      background-color: rgb(49, 109, 245);
+      color: white;
+      font-weight: 700;
+
+      padding: 3px 13px;
+      border-radius: 30px;
+    }
+    
+    /*12g*/
+    .gcontainer {
+      width: 400px;
+      border-style: solid;
+      border-color: gray;
+      padding: 0px 15px;
+      margin-bottom: 100px;
+    }
+    .gflexbox {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+    }
+
+    .info img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 30px;
+    }
+
+    .text-info p {
+      font-family: Roboto;
+      margin-top: 0px;
+      margin-bottom: 3px;
+    }
+
+    .name {
+      font: 13px;
+      font-weight: bold;
+    }
+
+    .nickname, .status {
+      color: gray;
+      opacity: 90%;
+    }
+
+    .nickname {
+      font-size: 17px;
+    }
+
+    .status {
+      font-size: 13px;
+    }
+
+    .gflexbox button {
+      background-color: rgb(49, 111, 255);
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      border-style: none;
+      border-radius: 6px;
+
+      padding: 10px 13px;
+    }
+
+    /*12f*/
+    .fcontainer {
+      background-color: rgb(120, 82, 178);
+      padding: 0px 10px;
+    }
+
+    .fflexbox {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 50px;
+    }
+
+    .fflexbox p, button {
+      font-family: Roboto;
+      color: white;
+    }
+
+    .fflexbox p {
+      font-weight: bold;
+    }
+
+    .fflexbox input {
+      flex: 1;
+      max-width: 300px;
+      padding: 7px 17px;
+      border-style: none;
+      border-radius: 30px;
+    }
+
+    .fflexbox button {
+      border-style: solid;
+      border-color: white;
+      background-color: transparent;
+      padding: 5px 15px;
+    }
+
+
+  </style>
+</head>
+<body>
+    <div class="econtainer">
+      <div class="eflexbox">
+        <div>Home</div>
+        <div class="notifications">14</div>
+      </div>
+      <div class="eflexbox">
+        <div>Notifications</div>
+        <div class="notifications">3</div>
+      </div>
+      <div class="eflexbox">
+        <div>Messages</div>
+        <div class="notifications">5</div>
+      </div>
+    </div>
+
+    <!--12g-->
+    <div class="gcontainer">
+      <div class="gflexbox">
+        <div class="info">
+          <img src="/Artworks/ringo - 初日の出 (78784366) .png">
+          <div class="text-info">
+            <p class="name">Shima Rin</p>
+            <p class="nickname">The Biker</p>
+            <p class="status">Popular</p>
+          </div>
+        </div>
+
+        <button>Follow</button>
+      </div>
+      
+      <div class="gflexbox">
+        <div class="info">
+          <img src="/Artworks/yuru-camp-insom-nial-transparent.png">
+
+          <div class="text-info">
+            <p class="name">Afro</p>
+            <p class="nickname">The God</p>
+            <p class="status">Extremely Popular</p>
+          </div>
+        </div>
+
+        <button>Follow</button>
+      </div>
+
+      <div class="gflexbox">
+        <div class="info">
+          <img src="/Artworks/よーな - 無題 (113616968) .png">
+
+          <div class="text-info">
+            <p class="name">Nadeshiko</p>
+            <p class="nickname">The Wife</p>
+            <p class="status">Popular</p>
+          </div>
+        </div>
+
+        <button>Follow</button>
+      </div>
+    </div>
+
+    <!--12f-->
+    <div class="fcontainer">
+      <div class="fflexbox">
+        <p>Home</p>
+        <input placeholder="Search">
+        <button>Download</button>
+      </div>
+    </div>
+</body>
+</html>

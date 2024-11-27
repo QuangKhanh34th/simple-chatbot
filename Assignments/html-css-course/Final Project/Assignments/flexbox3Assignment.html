@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flexbox Assignment 3</title>
+
+  <style>
+    p {
+      font-family: Roboto, Arial;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .container {
+      border-style: none;
+      border-radius: 5px;
+      width: 430px;
+      padding: 5px 10px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); 
+    }
+
+    .container .all-inbox {
+      color: rgb(122, 121, 121);
+      font-weight: 400;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+
+    .flexbox {
+      display: flex;
+      width: inherit;
+      align-items: center;
+      column-gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .avt {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .special-avt {
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      object-fit: cover;
+      object-position: 100%;
+    }
+
+    .mail {
+      flex: 1;
+    }
+
+    .name-time {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .name, .subject {
+      font-weight: bold;
+    }
+
+    .name {
+      font-size: 17px;
+    }
+
+    .time {
+      color: gray;
+      font-size: 14px;
+    }
+
+    .subject, .content {
+      font-size: 15px;
+    }
+
+    .content {
+      color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <p class="all-inbox">ALL INBOXES</p>
+    <div class="flexbox">
+      <img class="avt" src="/Artworks/よーな - 無題 (113616968) .png">
+      <div class="mail">
+        <div class="name-time">
+          <p class="name">Nadeshiko Kagamihara</p>
+          <p class="time">4:58 PM</p>
+        </div>
+        <p class="subject">Will you marry me?</p>
+        <p class="content">I don&#x2018t know how to say this, but I&#x2018ve had a crush..</p>
+      </div>
+    </div>
+
+    <div class="flexbox">
+      <img class="special-avt" src="/Artworks/z5891770799459_f395ad34a2674af1ad0c696d40aa7b11.png">
+      <div class="mail">
+        <div class="name-time">
+          <p class="name">Pita</p>
+          <p class="time">4:58 PM</p>
+        </div>
+        <p class="subject">Xin 50k</p>
+        <p class="content">Tao đang ở giai đoạn túng quẫn cấp độ 5, 50k của mày.. </p>
+      </div>
+    </div>
+
+    <div class="flexbox">
+      <img class="avt" src="/Artworks/Gemini_Generated_Image_u655hju655hju655.jpg">
+      <div class="mail">
+        <div class="name-time">
+          <p class="name">mbcard</p>
+          <p class="time">4:58 PM</p>
+        </div>
+        <p class="subject">Thông báo nợ quá hạn tài khoản [Kha#####]</p>
+        <p class="content">Yêu cầu thanh toán khoản nợ còn thiếu với giá trị 8150..</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
