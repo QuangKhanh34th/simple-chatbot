@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position Assignment 3</title>
+
+  <style>
+    .container {
+      position: relative;
+      width: 300px;
+      height: 300px;
+    }
+
+    .container img {
+      width: inherit;
+    }
+
+    .discount {
+      position: absolute;
+      right: 0px;
+      top: 20px;
+
+      background-color: black;
+      color: white;
+      font-family: Roboto, Arial;
+
+      padding: 4px 10px;
+    }
+
+    .buy {
+      background-color: rgba(255, 255, 255, 0.7);
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .add-cart {
+      padding: 7px 15px;
+      border-style: solid;
+      font-family: Roboto, Arial;
+      font-weight: 500;
+
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="/Artworks/z6075799029106_6168323a908b837124152e5f6d705ece.jpg">
+    <div class="discount">20% OFF</div>
+    <div class="buy">
+      <button class="add-cart">Add to cart</button>
+    </div>
+  </div>
+</body>
+</html>

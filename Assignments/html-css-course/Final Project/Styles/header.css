@@ -8,6 +8,7 @@
   left: 0;
   right: 0;
   background-color: white;
+  z-index: 100;
 
   /*we can modify a specific side of the border*/
   border-bottom-style: solid;
@@ -102,6 +103,25 @@
 
 .upload, .youtube-apps, .notifications {
   height: 24px;
+}
+
+.noti-container {
+  padding: 4px 6px;
+  position: relative;
+}
+
+.num-o-noti {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  padding: 2px 5px;
+  border-radius: 10px;
+
+  background-color: rgb(192, 0, 0);
+  color: white;
+  font-size: 11px;
+  font-family: Roboto, Arial;
 }
 
 .current-user-picture {

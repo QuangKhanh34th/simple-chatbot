@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Position assignment</title>
+
+  <style>
+    p {
+      font-family: Roboto, Arial;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .container {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 250px;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .servers {
+      background-color:  rgb(33, 33, 33);
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 10px;
+
+      padding-top: 15px;
+
+      width: 100px;      
+    }
+
+    .servers img {
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      object-fit: cover;
+    }
+
+    .channels {
+      background-color: rgb(55, 55, 55);
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+
+      padding: 10px 10px;
+    }
+
+    .category {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .category-name {
+      font-weight: bold;
+      font-size: 14px;
+      color: white;
+    }
+
+    .create-new {
+      color: rgb(150, 150, 150);
+      font-size: 25px;
+    }
+
+    .channel-list p{
+      color: rgb(150, 150, 150);
+      margin: 15px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="servers">
+      <img src="/Artworks/Gemini_Generated_Image_u655hju655hju655.jpg">
+      <img src="/Artworks/z6074639877208_aa88b148089c6adc10bb14ad2b7fa314.jpg">
+      <img src="/Artworks/U.-だらリンちゃんとなでしこちゃん.png">
+    </div>
+    <div class="channels">
+      <div class="category">
+        <p class="category-name">INFO</p>
+        <p class="create-new">+</p>
+      </div>
+      <div class="channel-list">
+        <p># new-videos</p>
+        <p># updates</p>
+        <p># faq</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

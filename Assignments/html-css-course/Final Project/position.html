@@ -29,6 +29,7 @@
     left: 0;
     right: 0;
     height: 50px;
+    z-index: 1;
 
     ">header</div>
 
@@ -44,21 +45,75 @@
     bottom: 0;
     top: 50px;
     width: 72px;
-    ">side bar</div>
+    z-index: 1;
+    ">side bar
+        <div style="
+        position: absolute;
+        background-color: red;
+        color: white;
+        top: 0;
+        right: 0;
+      ">
+        X
+      </div>
+    </div>
+
+    <!--
+      absolute behave almost the same as fixed, but the key difference is
+      + for elements with fixed position, they are placed in the "browser window"
+      + for elements with absolute position, they are placed ON the "page"
+
+      when we scroll the browser window, the the visible part of the web changes
+      depend on if we scroll left or right, up or down. That is the "page" scrolling.
+      so  elements with fixed position are placed in the "browser window" mean they will alway
+      be visible and in the same position no matter which direction you scroll
+
+      when a absolute element is placed inside a fixed element, its position will be
+      relative to the fixed element
+
+    -->
+    <div style="
+      position: absolute;
+      background-color: red;
+      color: white;
+      right: 0;
+    ">
+      absolute
+    </div>
+
   <div style="
     background-color: lightblue;
     height: 200px;
     width: 200px;
-    position: static;
     ">
     div 1
   </div>
+
+  <!--
+    relative elements behave like static (or default) elements, except that any
+    absolute elements placed inside them will have their position relate to the relative element,
+    just like how it did with fixed elements
+
+    this make absolute useful for things you want to be placed on top of other
+    elements like number of notifications, duration of a video
+  -->
   <div style="
     background-color: lightcoral;
     height: 200px;
     width: 200px;
+    position: relative;
     ">
-    div 2
+    relative
+
+    <div style="
+      position: absolute;
+      background-color: red;
+      color: white;
+      right: 10px;
+      bottom: 10px;
+    ">
+      absolute
+    </div>
   </div>
 </body>
 </html>

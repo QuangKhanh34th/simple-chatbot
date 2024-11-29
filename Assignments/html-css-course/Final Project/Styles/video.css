@@ -30,13 +30,32 @@
     */
 
 
-    .thumbnail {
-      /*width: 300px; this will hard-code the width to not follow the grid layout*/
-      width: 100%; /*use 100% width of the container*/
-    }
+
 
     .thumbnail-row {
       margin-bottom: 12px;
+      position: relative;
+    }
+
+    .thumbnail {
+      /*width: 300px; this will hard-code the width to not follow the grid layout*/
+      width: 100%; /*use 100% width of the container*/
+      height: 209.93px;
+      object-fit: contain;
+      background-color: black;
+    }
+
+    .video-duration {
+      font-family: Roboto, Arial;
+      font-size: 12px;
+      font-weight: 500;
+      padding: 2px 4px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 2px;
+      color: white;
+      position: absolute;
+      bottom: 10px;
+      right: 8px;
     }
     
     .video-infos-grid {
