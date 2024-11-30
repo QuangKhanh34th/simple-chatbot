@@ -40,9 +40,6 @@
     .thumbnail {
       /*width: 300px; this will hard-code the width to not follow the grid layout*/
       width: 100%; /*use 100% width of the container*/
-      height: 209.93px;
-      object-fit: contain;
-      background-color: black;
     }
 
     .video-duration {

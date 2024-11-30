@@ -1,5 +1,0 @@
-when we want to focus on the size of element when resizing window, use flexbox 
-
-when we want elements to follow a strict layout no matter the window size, use grid
-
-for most situations, for example nested layers, we can use either flexbox or grid, they work the same
