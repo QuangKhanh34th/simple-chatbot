@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>MyWife</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+
+
+
+<style>
+    #logo {
+        position: relative;
+    }
+
+    #logo::after {
+        content : "";
+        display: block;
+        position: absolute;
+        top:0;
+        left:0;
+        background-image: url(Artworks/yuru-camp-insom-nial-transparent.png);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 100%;
+        opacity: 0.5;
+        z-index: -1;
+    }
+
+    #main {
+        background-color: rgb(146, 199, 207);
+    }
+
+    #content {
+        text-align: center;
+    }
+
+    #textSlab {
+        -webkit-text-stroke-width: 0px;
+        -webkit-text-stroke-color: black;
+        paint-order: stroke fill;
+        font-family: "Roboto Slab", serif;
+        font-optical-sizing: auto;
+        font-weight: 800;
+    }
+
+    @keyframes color-change {
+        0% { color: red; }
+        15% { color: orange; }
+        30% { color: yellow; }
+        45% { color: green;}
+        60% { color: blue; }
+        75% { color: indigo;}
+        90% { color: violet; }
+    }
+    .rainbow-text {
+        animation: color-change 1s infinite;
+    }
+
+    
+</style>
+
+
+
+
+
+
+<body id="main">
+    <div id = "logo">
+        <div id="content">
+            <h1 style="color: rgb(251, 249, 241);">
+                <font size="10">
+                    <p id ="textSlab" style="font-style: italic;">Look at this beautiful figure</p>
+                </font>
+            </h1>
+
+            <img src="Artworks/よーな - 無題 (113616968) .png" alt="Nadeshiko in autumn leaves" style="height: 50%;width: 50%; ">
+
+            <p>
+                <font size="1">
+                    <div>
+                        <p id = "textSlab" style="display: inline;">She is my </p>
+                        <font size = "10"><p id="word" class="rainbow-text" style="display: inline; margin-left: 5px; font-family: 'Dancing Script'; font-style: italic;"></p></font>
+                    </div>
+                </font>
+            </p>
+        </div>
+    </div>
+
+    <script src ="TypingEffect.js"></script>
+</body>
+</html>
+
+

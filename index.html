@@ -1,105 +1,162 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>MyWife</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-    <script src='main.js'></script>
+  <title>React Exercise</title>
+  <style>
+    /* 1. Basic global styles to ensure full viewport usage */
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      /* Ensures 100vh works reliably */
+      width: 100%;
+      overflow: hidden;
+      /* Prevents scrollbars if content slightly overflows */
+    }
+
+    /* The .js-container will inherit these or be positioned by React */
+
+    .centered-heading-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: white;
+      z-index: 1000;
+      color: white;
+    }
+
+    .growing-heading {
+      user-select: none;
+      font-size: 1em;
+      /* Initial smaller size */
+      transition: font-size 1s ease-in-out;
+      /* Apply the transition */
+    }
+
+    .growing-heading.grown {
+      font-size: 6em;
+      /* Final bigger size */
+    }
+
+     /* === NEW: Keyframes for the seizure-like background animation === */
+    @keyframes seizureBackground {
+      0%   { background-color: #ff0000; } /* Red */
+      16%  { background-color: #00ff00; } /* Green */
+      33%  { background-color: #0000ff; } /* Blue */
+      50%  { background-color: #ffff00; } /* Yellow */
+      66%  { background-color: #ff00ff; } /* Magenta */
+      83%  { background-color: #00ffff; } /* Cyan */
+      100% { background-color: #ff0000; } /* Back to Red for seamless loop */
+    }
+
+    /* NEW: Class to apply the animation */
+    .seizure-mode {
+      /* Apply the animation: name duration timing-function iteration-count */
+      animation: seizureBackground 0.3s steps(1) infinite;
+      /*
+        0.3s: Very fast duration for a jarring effect
+        steps(1): Makes the color changes instantaneous (no fade between colors)
+        infinite: Makes the animation loop forever
+      */
+    } /* === NEW: Keyframes for the seizure-like background animation === */
+    @keyframes seizureBackground {
+      0%   { background-color: #ff0000; } /* Red */
+      16%  { background-color: #00ff00; } /* Green */
+      33%  { background-color: #0000ff; } /* Blue */
+      50%  { background-color: #ffff00; } /* Yellow */
+      66%  { background-color: #ff00ff; } /* Magenta */
+      83%  { background-color: #00ffff; } /* Cyan */
+      100% { background-color: #ff0000; } /* Back to Red for seamless loop */
+    }
+
+    /* NEW: Class to apply the animation */
+    .seizure-mode {
+      /* Apply the animation: name duration timing-function iteration-count */
+      animation: seizureBackground 0.3s steps(1) infinite;
+      /*
+        0.3s: Very fast duration for a jarring effect
+        steps(1): Makes the color changes instantaneous (no fade between colors)
+        infinite: Makes the animation loop forever
+      */
+    }
+  </style>
+
 </head>
 
+<body>
+  <div class="js-container"></div>
 
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
 
-<style>
-    #logo {
-        position: relative;
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+  <script type="text/babel">
+
+    function Heading({ count }) {
+      let headingMessage;
+      if (count >= 40) {
+        headingMessage = <h1 className="growing-heading grown">Địt mẹ mày</h1>;
+      } else if (count > 35) {
+        headingMessage = <h1>Sắp rồi</h1>;
+      } else if (count > 20) {
+        headingMessage = <h1>Nửa đường rồi!</h1>;
+      } else if (count > 0) { // Shows for any count > 0 but not 5 or 10
+        headingMessage = <h1>Tiếp đi!</h1>;
+      } else {
+        headingMessage = <h1>Bấm cái nút ở dưới đi</h1>;
+      }
+
+      return (
+        <>{headingMessage}</>
+      )
     }
 
-    #logo::after {
-        content : "";
-        display: block;
-        position: absolute;
-        top:0;
-        left:0;
-        background-image: url(Artworks/yuru-camp-insom-nial-transparent.png);
-        background-size: 50%;
-        background-repeat: no-repeat;
-        background-position: center;
-        width: 100%;
-        height: 100%;
-        opacity: 0.5;
-        z-index: -1;
+    function App() {
+      // Set a count state to control how many time the button has been clicked
+      const [count, setCount] = React.useState(0);
+      function countClick() {
+        // Incorrect
+        //count = setCount(count+1);
+
+        // Correct
+        setCount(count + 1);
+      }
+
+      // Main conditional rendering logic for the App component
+      if (count >= 40) {
+        // If count is 40 or more, render ONLY this specific heading
+        // We're hardcoding the message here as requested "show only *the* headingMessage"
+        // implying the one specifically for count 10.
+        return (
+          <div className="centered-heading-container seizure-mode">
+            {/* The Heading component will now apply the 'grown' class */}
+            <Heading count={count} />
+          </div>
+        );
+      } else {
+        // Otherwise (if count is less than 10), render the usual content
+        return (
+          <div>
+            <Heading count={count} />
+            <button onClick={countClick}>
+              {count === 0 ? 'Click me' : `Clicked ${count} time${count > 1 ? 's' : ''}`}
+            </button>
+          </div>
+        );
+      }
     }
 
-    #main {
-        background-color: rgb(146, 199, 207);
-    }
 
-    #content {
-        text-align: center;
-    }
-
-    #textSlab {
-        -webkit-text-stroke-width: 0px;
-        -webkit-text-stroke-color: black;
-        paint-order: stroke fill;
-        font-family: "Roboto Slab", serif;
-        font-optical-sizing: auto;
-        font-weight: 800;
-    }
-
-    @keyframes color-change {
-        0% { color: red; }
-        15% { color: orange; }
-        30% { color: yellow; }
-        45% { color: green;}
-        60% { color: blue; }
-        75% { color: indigo;}
-        90% { color: violet; }
-    }
-    .rainbow-text {
-        animation: color-change 1s infinite;
-    }
-
-    
-</style>
-
-
-
-
-
-
-<body id="main">
-    <div id = "logo">
-        <div id="content">
-            <h1 style="color: rgb(251, 249, 241);">
-                <font size="10">
-                    <p id ="textSlab" style="font-style: italic;">Look at this beautiful figure</p>
-                </font>
-            </h1>
-
-            <img src="Artworks/よーな - 無題 (113616968) .png" alt="Nadeshiko in autumn leaves" style="height: 50%;width: 50%; ">
-
-            <p>
-                <font size="1">
-                    <div>
-                        <p id = "textSlab" style="display: inline;">She is my </p>
-                        <font size = "10"><p id="word" class="rainbow-text" style="display: inline; margin-left: 5px; font-family: 'Dancing Script'; font-style: italic;"></p></font>
-                    </div>
-                </font>
-            </p>
-        </div>
-    </div>
-
-    <script src ="TypingEffect.js"></script>
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(<App />);
+  </script>
 </body>
+
 </html>
-
-
