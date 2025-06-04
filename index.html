@@ -36,7 +36,7 @@
       user-select: none;
       font-size: 1em;
       /* Initial smaller size */
-      transition: font-size 1.35s ease-in-out;
+      transition: font-size 1.25s ease-in-out;
       /* Apply the transition */
     }
 
@@ -45,15 +45,43 @@
       /* Final bigger size */
     }
 
-     /* === NEW: Keyframes for the seizure-like background animation === */
+    /* === NEW: Keyframes for the seizure-like background animation === */
     @keyframes seizureBackground {
-      0%   { background-color: #ff0000; } /* Red */
-      16%  { background-color: #00ff00; } /* Green */
-      33%  { background-color: #0000ff; } /* Blue */
-      50%  { background-color: #ffff00; } /* Yellow */
-      66%  { background-color: #ff00ff; } /* Magenta */
-      83%  { background-color: #00ffff; } /* Cyan */
-      100% { background-color: #ff0000; } /* Back to Red for seamless loop */
+      0% {
+        background-color: #ff0000;
+      }
+
+      /* Red */
+      16% {
+        background-color: #00ff00;
+      }
+
+      /* Green */
+      33% {
+        background-color: #0000ff;
+      }
+
+      /* Blue */
+      50% {
+        background-color: #ffff00;
+      }
+
+      /* Yellow */
+      66% {
+        background-color: #ff00ff;
+      }
+
+      /* Magenta */
+      83% {
+        background-color: #00ffff;
+      }
+
+      /* Cyan */
+      100% {
+        background-color: #ff0000;
+      }
+
+      /* Back to Red for seamless loop */
     }
 
     /* NEW: Class to apply the animation */
@@ -65,15 +93,45 @@
         steps(1): Makes the color changes instantaneous (no fade between colors)
         infinite: Makes the animation loop forever
       */
-    } /* === NEW: Keyframes for the seizure-like background animation === */
+    }
+
+    /* === NEW: Keyframes for the seizure-like background animation === */
     @keyframes seizureBackground {
-      0%   { background-color: #ff0000; } /* Red */
-      16%  { background-color: #00ff00; } /* Green */
-      33%  { background-color: #0000ff; } /* Blue */
-      50%  { background-color: #ffff00; } /* Yellow */
-      66%  { background-color: #ff00ff; } /* Magenta */
-      83%  { background-color: #00ffff; } /* Cyan */
-      100% { background-color: #ff0000; } /* Back to Red for seamless loop */
+      0% {
+        background-color: #ff0000;
+      }
+
+      /* Red */
+      16% {
+        background-color: #00ff00;
+      }
+
+      /* Green */
+      33% {
+        background-color: #0000ff;
+      }
+
+      /* Blue */
+      50% {
+        background-color: #ffff00;
+      }
+
+      /* Yellow */
+      66% {
+        background-color: #ff00ff;
+      }
+
+      /* Magenta */
+      83% {
+        background-color: #00ffff;
+      }
+
+      /* Cyan */
+      100% {
+        background-color: #ff0000;
+      }
+
+      /* Back to Red for seamless loop */
     }
 
     /* NEW: Class to apply the animation */
@@ -88,27 +146,42 @@
     }
 
     .my-button {
-      padding: 10px 20px; /* Default padding for desktop/larger screens */
-      font-size: 1em;    /* Default font size */
+      padding: 10px 20px;
+      /* Default padding for desktop/larger screens */
+      font-size: 1em;
+      /* Default font size */
       cursor: pointer;
       border: 1px solid #ccc;
       border-radius: 5px;
       background-color: #f0f0f0;
-      transition: all 0.2s ease; /* Smooth transition for hover/active states */
+      transition: all 0.2s ease;
+      /* Smooth transition for hover/active states */
     }
 
     .my-button:hover {
-        background-color: #e0e0e0;
+      background-color: #e0e0e0;
     }
 
     /* Media query for phones/smaller screens */
-    @media (max-width: 768px) { /* Styles apply when screen width is 768px or less */
+    @media (max-width: 768px) {
+
+      /* Styles apply when screen width is 768px or less */
       .my-button {
-        padding: 20px 40px; /* Much larger padding */
-        font-size: 1.8em;   /* Bigger font size */
-        width: 80%;         /* Make it take up 80% of the screen width */
-        display: block;     /* Make it a block element so width takes effect */
-        margin: 30px auto;  /* Center the block button and add some vertical space */
+        padding: 20px 40px;
+        /* Much larger padding */
+        font-size: 1.8em;
+        /* Bigger font size */
+        width: 80%;
+        /* Make it take up 80% of the screen width */
+        display: block;
+        /* Make it a block element so width takes effect */
+        margin: 30px auto;
+        /* Center the block button and add some vertical space */
+      }
+
+      .dynamic-heading {
+        /* New class for the general headings */
+        text-align: center;
       }
     }
   </style>
@@ -129,13 +202,13 @@
       if (count >= 40) {
         headingMessage = <h1 className="growing-heading grown">Địt mẹ mày</h1>;
       } else if (count > 35) {
-        headingMessage = <h1>Sắp rồi</h1>;
+        headingMessage = <h1 className="dynamic-heading" >Sắp rồi</h1>;
       } else if (count > 20) {
-        headingMessage = <h1>Nửa đường rồi!</h1>;
+        headingMessage = <h1 className="dynamic-heading">Nửa đường rồi!</h1>;
       } else if (count > 0) { // Shows for any count > 0 but not 5 or 10
-        headingMessage = <h1>Tiếp đi!</h1>;
+        headingMessage = <h1 className="dynamic-heading">Tiếp đi!</h1>;
       } else {
-        headingMessage = <h1>Bấm cái nút ở dưới đi</h1>;
+        headingMessage = <h1 className="dynamic-heading">Bấm cái nút ở dưới đi</h1>;
       }
 
       return (
