@@ -86,6 +86,31 @@
         infinite: Makes the animation loop forever
       */
     }
+
+    .my-button {
+      padding: 10px 20px; /* Default padding for desktop/larger screens */
+      font-size: 1em;    /* Default font size */
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      transition: all 0.2s ease; /* Smooth transition for hover/active states */
+    }
+
+    .my-button:hover {
+        background-color: #e0e0e0;
+    }
+
+    /* Media query for phones/smaller screens */
+    @media (max-width: 768px) { /* Styles apply when screen width is 768px or less */
+      .my-button {
+        padding: 20px 40px; /* Much larger padding */
+        font-size: 1.8em;   /* Bigger font size */
+        width: 80%;         /* Make it take up 80% of the screen width */
+        display: block;     /* Make it a block element so width takes effect */
+        margin: 30px auto;  /* Center the block button and add some vertical space */
+      }
+    }
   </style>
 
 </head>
@@ -145,7 +170,7 @@
         return (
           <div>
             <Heading count={count} />
-            <button onClick={countClick}>
+            <button className="my-button" onClick={countClick}>
               {count === 0 ? 'Click me' : `Clicked ${count} time${count > 1 ? 's' : ''}`}
             </button>
           </div>
