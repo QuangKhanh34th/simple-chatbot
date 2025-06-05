@@ -35,65 +35,15 @@
 
     .growing-heading {
       user-select: none;
-      font-size: 1em;
+      font-size: 10px;
       /* Initial smaller size */
-      transition: font-size 1.25s ease-in-out;
+      transition: font-size 0.5s ease-in-out;
       /* Apply the transition */
     }
 
     .growing-heading.grown {
       font-size: 4em;
       /* Final bigger size */
-    }
-
-    /* === NEW: Keyframes for the seizure-like background animation === */
-    @keyframes seizureBackground {
-      0% {
-        background-color: #ff0000;
-      }
-
-      /* Red */
-      16% {
-        background-color: #00ff00;
-      }
-
-      /* Green */
-      33% {
-        background-color: #0000ff;
-      }
-
-      /* Blue */
-      50% {
-        background-color: #ffff00;
-      }
-
-      /* Yellow */
-      66% {
-        background-color: #ff00ff;
-      }
-
-      /* Magenta */
-      83% {
-        background-color: #00ffff;
-      }
-
-      /* Cyan */
-      100% {
-        background-color: #ff0000;
-      }
-
-      /* Back to Red for seamless loop */
-    }
-
-    /* NEW: Class to apply the animation */
-    .seizure-mode {
-      /* Apply the animation: name duration timing-function iteration-count */
-      animation: seizureBackground 0.3s steps(1) infinite;
-      /*
-        0.3s: Very fast duration for a jarring effect
-        steps(1): Makes the color changes instantaneous (no fade between colors)
-        infinite: Makes the animation loop forever
-      */
     }
 
     /* === NEW: Keyframes for the seizure-like background animation === */
@@ -185,6 +135,10 @@
         text-align: center;
       }
     }
+
+    .almost {
+      color: red;
+    }
   </style>
 
 </head>
@@ -203,7 +157,7 @@
       if (count >= 40) {
         headingMessage = <h1 className="growing-heading grown">Địt mẹ mày</h1>;
       } else if (count > 35) {
-        headingMessage = <h1 className="dynamic-heading" >Sắp rồi</h1>;
+        headingMessage = <h1 className="dynamic-heading almost" >Sắp rồi</h1>;
       } else if (count > 20) {
         headingMessage = <h1 className="dynamic-heading">Nửa đường rồi!</h1>;
       } else if (count > 0) { // Shows for any count > 0 but not 5 or 10
