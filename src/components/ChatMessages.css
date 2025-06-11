@@ -1,0 +1,16 @@
+.welcome-message {
+  color: gray;
+}
+
+/* the box that hold all the messages */
+.chat-messages-container {
+  flex-grow: 1;
+  /* Grow so that it push the input to the bottom*/
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: scroll;
+  scrollbar-width: none;
+  /* hide the scroll bar (generally) */
+  -ms-overflow-style: none;
+  /* the same but for microsoft browsers */
+}

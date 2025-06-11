@@ -1,0 +1,12 @@
+.app-container {
+  /* Center the layout */
+  max-width: 600px;
+  margin: auto;
+  height: 100vh;
+  /* Viewport height = height of the browser*/
+  display: flex;
+  flex-direction: column;
+}
+
+
+
