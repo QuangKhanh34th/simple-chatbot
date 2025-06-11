@@ -1,4 +1,4 @@
-import RobotProfileImage from '../assets/robot.png'; //default export (explain later)
+import RobotProfileImage from '../assets/Nadebot.png'; //default export (explain later)
 import UserProfileImage from '../assets/user.png'; // when import image, Vite assign the filepath of that image to the variable we defined
 import './ChatMessage.css';
 

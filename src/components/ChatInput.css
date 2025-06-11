@@ -1,6 +1,8 @@
 .chat-input-container {
   display: flex;
   margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .send-button {
@@ -26,4 +28,21 @@
 .loading-spinner {
   height: 40px;
   margin: -15px;
+}
+
+@media (max-width: 600px) {
+  .chat-input-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .chat-input {
+    font-size: 14px;
+    padding: 10px 8px;
+    min-width: 0;
+  }
+  .send-button {
+    font-size: 14px;
+    padding: 10px 12px;
+    margin-left: 6px;
+  }
 }
