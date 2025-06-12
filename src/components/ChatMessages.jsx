@@ -10,7 +10,7 @@ function ChatMessages({ chatMessages }) {
     <div className="chat-messages-container" ref={chatMessagesRef}>
 
       {chatMessages.length === 0
-        ? <div className="welcome-message">Welcome to the chatbot project! Send a message using the textbox below.</div>
+        ? <div className="welcome-message">Welcome to Yurucamp Chatbot! Send a message using the textbox below.</div>
         : chatMessages.map((chatMessage) => {
           return (
             <ChatMessage

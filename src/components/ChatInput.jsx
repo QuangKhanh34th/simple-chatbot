@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Chatbot} from 'supersimpledev';
+import Chatbot from '../chatbot';
 import loadingSpinner from '../assets/loading-spinner.gif';
 import './ChatInput.css';
 
@@ -39,27 +39,54 @@ export function ChatInput({ chatMessages, setChatMessages }) {
     // flush old input first before waiting for a promise
     setInputText('');
 
-    setChatMessages([
-      ...newChatMessages,
-      {
-        message: <img src={loadingSpinner} className="loading-spinner" />,
-        sender: 'robot',
-        id: crypto.randomUUID()
-      }
-    ]);
+    // Remove the initial loading spinner for multi-response
+    // Only show the spinner for single responses
 
     // When is Loading is true, disable the input
     setIsLoading(true);
 
     const response = await Chatbot.getResponseAsync(inputText);
-    setChatMessages([
-      ...newChatMessages,
-      {
-        message: response,
-        sender: 'robot',
-        id: crypto.randomUUID()
+    if (Array.isArray(response)) {
+      // For multiple responses, do NOT show the initial spinner
+      for (let i = 0; i < response.length; i++) {
+        setChatMessages(prev => [
+          ...prev,
+          {
+            message: <img src={loadingSpinner} className="loading-spinner" />,
+            sender: 'robot',
+            id: crypto.randomUUID()
+          }
+        ]);
+        await Chatbot.getResponseAsyncCustomDelay(inputText, 1750);
+        setChatMessages(prev => [
+          ...prev.slice(0, -1),
+          {
+            message: response[i],
+            sender: 'robot',
+            id: crypto.randomUUID()
+          }
+        ]);
       }
-    ]);
+    } else {
+      // For single response, show the spinner before the message
+      setChatMessages([
+        ...newChatMessages,
+        {
+          message: <img src={loadingSpinner} className="loading-spinner" />,
+          sender: 'robot',
+          id: crypto.randomUUID()
+        }
+      ]);
+      await Chatbot.getResponseAsyncCustomDelay(inputText, 1750);
+      setChatMessages([
+        ...newChatMessages,
+        {
+          message: response,
+          sender: 'robot',
+          id: crypto.randomUUID()
+        }
+      ]);
+    }
 
     // Set isLoading back to false, enable the input again
     setIsLoading(false);
@@ -70,7 +97,7 @@ export function ChatInput({ chatMessages, setChatMessages }) {
     <div className="chat-input-container">
       <input
         className="chat-input"
-        placeholder="Send a message to Chatbot"
+        placeholder="Send a message to Nadeshiko"
         size="30"
         onChange={saveInputText}
         onKeyDown={controlActionShortcuts}
