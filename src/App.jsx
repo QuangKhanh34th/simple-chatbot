@@ -16,7 +16,7 @@ function App() {
         'Tabehoudai!!!',
         'Yori mo anata! ( //>///<//)♡'
       ],
-      'Who is "Duc" best waifu': 'I don\'t know who is this "Duc" you mentioned but based on the information you gave me, it\'s probably "Skadi" from the game Arknight',
+      'Who is "Duc" best waifu': 'Oh, hehe~! I don\'t know who this "Đức" person is you\'re talking about, but from what you told me, it sounds a lot like Skadi from Arknights! ✨ (๑>ᴗ<๑)',
       'goodbye': 'Bye-bye! Hope you have a great day! (づ> v <)づ♡',
 
 

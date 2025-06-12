@@ -44,7 +44,7 @@ const Chatbot = {
 
   additionalResponses: {},
 
-  unsuccessfulResponse: `"Ehehe, I'm so sorry! (ᵕ—ᗜ—) I'm still learning, and right now, I can only flip a coin, roll a dice, or tell you today's date! How can I help you with those? \n⸜(｡˃ ᵕ ˂ )⸝♡"`,
+  unsuccessfulResponse: `"Ehehe, I'm so sorry! (ᵕ—ᗜ—) I'm still learning, and right now, I can only flip a coin, roll a dice, or tell you today's date (and maybe a few lines you taught me)! How can I help you with those? \n⸜(｡˃ ᵕ ˂ )⸝♡"`,
 
   emptyMessageResponse: `Hee hee! Your message looks a little shy and empty right now! Could you send me something so I can play along and help you ⸜(｡ ˃ ᵕ ˂ )⸝♡`,
 
