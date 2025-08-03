@@ -4,8 +4,8 @@
 
 const Chatbot = {
   defaultResponses: {
-    'hello': `Hiii!!! How can I help you? ( ˶ˆᗜˆ˵ )`,
-    'hi': `Hiii!!! How can I help you? ( ˶ˆᗜˆ˵ )`,
+    'hello': `Hiii!!!\n How can I help you? ( ˶ˆᗜˆ˵ )`,
+    'hi': `Hiii!!!\n How can I help you? ( ˶ˆᗜˆ˵ )`,
     'how are you': `100% capacity right now! ᕙ( •̀ ᗜ •́ )ᕗ. How can I help you?`,
     'flip a coin': function () {
       const randomNumber = Math.random();
@@ -44,7 +44,14 @@ const Chatbot = {
 
   additionalResponses: {},
 
-  unsuccessfulResponse: `"Ehehe, I'm so sorry! (ᵕ—ᗜ—) I'm still learning, and right now, I can only flip a coin, roll a dice, or tell you today's date (and maybe a few lines you taught me)! How can I help you with those? \n⸜(｡˃ ᵕ ˂ )⸝♡"`,
+  unsuccessfulResponse: 
+  `Ehehe, I'm so sorry but I can't quite understand that! (ᵕ—ᗜ—) I'm still learning, and right now, these are the things I can help you with ⸜(｡˃ ᵕ ˂ )⸝♡\n
+    - flip a coin
+    - roll a dice
+    - tell you today's date
+    - the recreation of some lines from a specific idol group singing about ice screams (Hint: try calling my name)
+
+    How can I help you with those?`,
 
   emptyMessageResponse: `Hee hee! Your message looks a little shy and empty right now! Could you send me something so I can play along and help you ⸜(｡ ˃ ᵕ ˂ )⸝♡`,
 
