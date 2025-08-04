@@ -49,7 +49,7 @@ const Chatbot = {
     - flip a coin
     - roll a dice
     - tell you today's date
-    - the recreation of some lines from a specific idol group singing about ice screams (Hint: try calling my name)
+    - the reenactment of some lines from a specific idol group singing about ice creams (Hint: try calling my name)
 
     How can I help you with those?`,
 
